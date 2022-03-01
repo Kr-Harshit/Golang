@@ -1,0 +1,41 @@
+.todo__container {
+	width: 100%;
+	padding: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.todos__heading {
+	font-size: 22px;
+	margin-bottom: 0.2em;
+	font-weight: 500;
+}
+
+.todoList {
+	padding: 0.5em;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 5px;
+	border-radius: 5px;
+}
+
+.active {
+	background-color: #fffdde;
+}
+
+.completed {
+	background-color: #baffb4;
+}
+
+@media (max-width: 800px) {
+	.todo__container {
+		flex-wrap: wrap;
+	}
+
+	.todoList {
+		width: 100%;
+	}
+}

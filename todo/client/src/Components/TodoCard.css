@@ -1,0 +1,62 @@
+.todo__card {
+	padding: 1em 0.6em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 95%;
+	border-radius: 5px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	margin: 5px 0;
+}
+
+.todo__content {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	justify-content: flex-end;
+	padding-left: 5px;
+}
+
+.todo__text {
+	border: none;
+	font-size: 20px;
+	background-color: inherit;
+}
+
+.todo__text:disabled {
+	background-color: transparent;
+	color: black;
+}
+
+.todo__text:focus {
+	outline: none;
+}
+
+.todo__deadline {
+	font-size: 12px;
+	color: rgb(114, 114, 114);
+}
+
+.todo__control {
+	width: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.todo__icon {
+	font-size: 24px;
+	margin-right: 10px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.todo__icon:hover {
+	transform: scale(0.85);
+}
+
+.todo__icon:active {
+	transform: scale(0.85);
+}

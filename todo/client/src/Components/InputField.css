@@ -1,0 +1,105 @@
+.input {
+	display: flex;
+	width: 80%;
+	padding: 1.2em 1em;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+		rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.flex__wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 10px 0;
+	flex-wrap: wrap;
+}
+
+.input__box {
+	border-radius: 5px;
+	padding: 0.2em 0.5em;
+	font-size: 1.3rem;
+	border: 1px solid rgb(180, 179, 179);
+	transition: 0.2s;
+}
+
+.input__box:focus {
+	font-size: 25px;
+	outline: rgba(128, 128, 128, 0.671) solid 1px;
+}
+
+#input__text {
+	width: 100%;
+}
+
+.input__date__wrapper {
+	min-width: 50%;
+	font-size: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.input__label {
+	font-size: 13px;
+	color: rgb(78, 78, 78);
+}
+
+#input__date {
+	font-size: 15px;
+}
+
+.deadline__inner__wrapper {
+	display: flex;
+	align-items: flex-end;
+}
+
+.deadline__rest {
+	color: blue;
+	cursor: pointer;
+	margin: 0 10px;
+	font-size: 16px;
+}
+
+.input__submit {
+	padding: 10px 20px;
+	font-size: 18px;
+	border-radius: 5px;
+	background-color: #5cb85c;
+	color: white;
+	border: 0;
+	box-shadow: 2px 2px 4px black;
+	transition: 0.2s;
+}
+
+.input__submit:hover {
+	background-color: #65c965;
+}
+
+.input__submit:active {
+	transform: scale(0.9);
+	box-shadow: 1px 1px 2px black;
+	background-color: #65c965;
+}
+
+@media (max-width: 800px) {
+	.input__date__wrapper {
+		width: 60%;
+	}
+}
+
+@media (max-width: 450px) {
+	.flex__wrapper {
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.input__submit {
+		margin: 10px 0;
+	}
+}
