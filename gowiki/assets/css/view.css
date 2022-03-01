@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+h1 {
+    margin: 20px auto;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 3.5em;
+}
+
+div{
+    margin: 0 20px ;
+    padding: 20px;
+    border: gray 1px solid;
+    height: 65%;
+    overflow-y: scroll;
+}
+
+p{
+    text-align: center;
+}
+
+#edit {
+    position: fixed;
+    padding: 15px 30px;
+    bottom: 50px;
+    text-decoration: none;
+    color: black;
+    border: black 1px solid;
+    border-radius: 5px;
+    box-shadow: 1px 3px #999;
+}
+
+#edit:hover {background-color: rgb(235, 234, 230)}
+
+#edit:active {
+  background-color: rgb(235, 234, 230);
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}

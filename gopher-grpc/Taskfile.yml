@@ -1,0 +1,7 @@
+version: 3
+
+tasks:
+  build:
+    desc: "build the app"
+    cmds:
+      - go build -o bin/gopher-grpc main.go

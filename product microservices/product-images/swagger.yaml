@@ -1,0 +1,55 @@
+definitions:
+  File:
+    title: File represents an open file descriptor.
+    type: object
+    x-go-package: os
+  GenericError:
+    description: Generic Error is generic Error Message returned by Server
+    properties:
+      message:
+        type: string
+        x-go-name: Message
+    type: object
+    x-go-package: github.com/coffee/product-image-microservice/handlers
+info: {}
+paths:
+  /images/{id}/{filename}:
+    post:
+      description: Saves Product image to file store
+      operationId: SaveImage
+      parameters:
+      - description: id for which the operation relates
+        in: path
+        name: id
+        required: true
+        type: string
+        x-go-name: ID
+      - description: filename for image in basepath
+        in: path
+        name: filename
+        required: true
+        type: string
+        x-go-name: Filename
+      responses:
+        "201":
+          $ref: '#/responses/noContentResponse'
+        "400":
+          $ref: '#/responses/errorResponse'
+        "500":
+          $ref: '#/responses/errorResponse'
+      tags:
+      - ProductImages
+responses:
+  errorResponse:
+    description: Generic Error message returned as string
+    schema:
+      $ref: '#/definitions/GenericError'
+  fileResponse:
+    description: FileContent is returned by this API endpoint
+    headers:
+      file: {}
+    schema:
+      $ref: '#/definitions/File'
+  noContentResponse:
+    description: No content is returned by this API endpoint
+swagger: "2.0"

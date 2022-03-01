@@ -1,0 +1,167 @@
+syntax = "proto3";
+
+option go_package = "./;protos";
+
+service Currency {
+    // GetRate returns the exchange rate for the two provided currency codes
+    rpc GetRate(RateRequest) returns (RateResponse);
+}
+
+// RateRequest defines the request for a GetRate Call
+message RateRequest {
+    // Base is the base currency code for the rate
+    Currencies Base = 1;
+    // Destination is the destination currency code for the rate 
+    Currencies Destination = 2;
+} 
+
+// RateResponse is the response from a GetRate call, it contains
+// rate which is flowing point number and can be used to convert between the
+// two currencies specified in the request
+message RateResponse {
+    double Rate = 1;
+}
+
+// Currencies is the enum which represents the allowed currencies for API
+enum Currencies {
+USD=0;
+ERN=1;
+BRL=2;
+AOA=3;
+NPR=4;
+MWK=5;
+SYP=6;
+MUR=7;
+SLL=8;
+SZL=9;
+SAR=10;
+PLN=11;
+KZT=12;
+AZN=13;
+URY=14;
+BIF=15;
+BYR=16;
+UZS=17;
+KHR=18;
+TMT=19;
+PAB=20;
+GEL=21;
+EUR=22;
+ILS=23;
+GTQ=24;
+SOS=25;
+ETH=26;
+DKK=27;
+RSD=28;
+LSL=29;
+AMD=30;
+XPF=31;
+GBP=32;
+SGD=33;
+MAD=34;
+BHD=35;
+BND=36;
+GMD=37;
+IRR=38;
+LBP=39;
+YER=40;
+DJF=41;
+OMR=42;
+DOP=43;
+ETB=44;
+CNY=45;
+INR=46;
+NOK=47;
+BDT=48;
+IDR=49;
+THB=50;
+EGP=51;
+CDF=52;
+UGX=53;
+AFN=54;
+MDL=55;
+PKR=56;
+HUF=57;
+UAH=58;
+LKR=59;
+LTC=60;
+SSP=61;
+PYG=62;
+MGA=63;
+RWF=64;
+KYD=65;
+CLP=66;
+RON=67;
+MMK=68;
+TND=69;
+XRP=70;
+ZAR=71;
+BOB=72;
+KGS=73;
+XOF=74;
+NZD=75;
+CHF=76;
+CAD=77;
+IQD=78;
+CUC=79;
+KMF=80;
+COP=81;
+BWP=82;
+PGK=83;
+HTG=84;
+MXN=85;
+MZN=86;
+MNT=87;
+NIO=88;
+SEK=89;
+TWD=90;
+PEN=91;
+ALL=92;
+BIH=93;
+LAK=94;
+MKD=95;
+HKD=96;
+DZD=97;
+CZK=98;
+VND=99;
+BSD=100;
+SCR=101;
+KRW=102;
+MYR=103;
+MOP=104;
+ISK=105;
+QAR=106;
+LYD=107;
+HNL=108;
+NAD=109;
+BGN=110;
+ARS=111;
+TJS=112;
+GYD=113;
+MVR=114;
+JOD=115;
+PHP=116;
+KES=117;
+TZS=118;
+AUD=119;
+GHS=120;
+BTC=121;
+SVC=122;
+XAF=123;
+FJD=124;
+STD=125;
+RUB=126;
+AED=127;
+SRD=128;
+JPY=129;
+CRC=130;
+TTD=131;
+TRY=132;
+LRD=133;
+CVE=134;
+GNF=135;
+NGN=136;
+SDG=137;
+HRV=138;
+JMD=139;
+}

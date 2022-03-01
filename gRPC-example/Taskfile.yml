@@ -1,0 +1,12 @@
+version: 3
+
+tasks:
+  start_server:
+    desc: "Starts gRPC server"
+    cmds:
+      - go run server.go
+
+  start_client:
+    desc: "Starts go gRPC client"
+    cmds:
+      - go run ./testing/client.go
